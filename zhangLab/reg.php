@@ -3,49 +3,35 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<meta name="Keywords" content="华中农业大学,信息学院,张红雨教授,生物信息,农业生物信息湖北省重点实验室"/>
+		<meta name="Keywords" content="信息学院,张红雨教授,生物信息,农业生物信息湖北省重点实验室"/>
 		<meta name="author" content="李姜,Ron Lee,sdj"/>
 		<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css"/>
-		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>		
+		<script src="js/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="./bootstrap/js/bootstrap.min.js"/>
 		<style>
 			body{
 				margin: 0px;
 				padding: 0px;
-				background-image: url(img/login1.jpg);
+				background-image: url(./img/login1.jpg);
 				background-size: 100%;
 			}
-			#container1{
+			.container{
 				width: 598px;
 				position: absolute;
-				margin-top: 17%;
-				margin-left: 36.5%;
-			}
-			#container2{
-				width:601px;
-				position: absolute;
-				margin-left: 35.7%;
-				margin-top:28%;
+				margin-top: 16.5%;
+				margin-left:36.5%;
 			}
 		</style>
 		<script type="text/javascript">
-			$(function(){
-				$("#register").click(function(){
-					window.location.href="./reg.php";
-				});
-				
-			});
-			
 			function fresh(){
 				$("img").attr("src","./Page/code.php?r="+Math.random(100));
 			}
-		
 		</script>
-		<title>页面登录</title>
+		<title>页面注册</title>
 	</head>
 	<body>
-		<div class="container" id="container1">
-			<form class="form-horizontal" role="form" action="Page/doLogin.php" method="post">
+		<div class="container">
+			<form class="form-horizontal" role="form" action="Page/doReg.php" method="post">
 			  <div class="form-group">
 			   <div class="col-sm-10">
 			      <input type="text" class="form-control" name="username" placeholder="请输入用户名(必须)">
@@ -54,6 +40,11 @@
 			  <div class="form-group">
 			    <div class="col-sm-10">
 			      <input type="password" class="form-control" name="password" placeholder="请输入密码(必须)">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-10">
+			      <input type="password" class="form-control" name="repassword" placeholder="请再次输入密码(必须)">
 			    </div>
 			  </div>
 			  <div class="form-group">
@@ -66,17 +57,15 @@
 			    </div>
 			  <div class="form-group">
 			    <div class="col-sm-10">
-			      <button type="submit" class="btn btn-success" style="width:100%;">登录</button>
+			      <button type="submit" class="btn btn-success" style="width:100%;">注册</button>
 			      </div>
 			  </div>
-			</form>
-		</div>
-		<div class="container" id="container2">
-			<div class="form-group" >
-			    <div class="col-sm-10" >
-			      <button class="btn btn-danger" id="register" style="width: 105%;">注册</button>
+			  <div class="form-group">
+			    <div class="col-sm-10">
+			      <button type="reset" class="btn btn-danger" style="width:100%;">重置</button>
 			    </div>
-			</div>
+			  </div>
+			</form>
 		</div>
 	</body>
 </html>

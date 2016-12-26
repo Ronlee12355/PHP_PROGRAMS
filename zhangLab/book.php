@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<title>实验室藏书</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<meta name="Keywords" content="湖北省武汉市,华中农业大学,信息学院,张红雨教授,生物信息,农业生物信息湖北省重点实验室"/>
+		<meta name="Keywords" content="信息学院,张红雨教授,生物信息,农业生物信息湖北省重点实验室"/>
 		<meta name="author" content="李姜,Ron Lee,sdj"/>
 		<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css"/>
 		<script src="js/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>

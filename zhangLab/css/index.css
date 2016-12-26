@@ -1,0 +1,37 @@
+body{
+	margin: 0;
+	padding: 0;
+	padding-top: 45px;
+	background-color:#F8F8F8
+	}
+#ad-carousel .item{
+	margin-top:0.5%;
+	height:100%;
+	width: 100%;
+		}
+#ad-carousel img{
+	
+	width: 100%;
+		}
+/*.navbar-default{
+	background-color: #05222A;
+}*/
+.img-rounded:hover{
+	vertical-align: middle;    
+    -webkit-transition: -webkit-transform .2s;
+    transition: transform .2s;
+	-webkit-transform:scale(1.05);
+    -moz-transform:scale(1.05);
+    -transform:scale(1.05);
+    box-shadow: 0 0 12px;
+}
+.img-circle:hover{
+    box-shadow: 0 0 12px;
+}
+a:hover{
+	color:dodgerblue;
+}
+.panel:hover{
+	box-shadow: 0 0 24px;
+	}
+
