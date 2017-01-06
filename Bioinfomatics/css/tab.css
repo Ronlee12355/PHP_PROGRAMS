@@ -1,0 +1,19 @@
+#myTabContent img{
+	width: 100%;
+}
+#myTabContent p{
+	font-family: "arial, helvetica, sans-serif";
+	font-size: 1.1em;
+}
+.tab-pane{
+	margin-top: 1.5%;
+}
+.tab-pane p{
+	margin-bottom: 2%;
+}
+#myTab a{
+	color: #003366;
+}
+#myTab a:hover{
+	color: #337AB7;
+}

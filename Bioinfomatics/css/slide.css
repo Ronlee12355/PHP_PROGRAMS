@@ -1,0 +1,9 @@
+body{
+	background-color: #F9F9F9;
+}
+.panel-body .list-group a{
+	color: #000000;
+}
+.panel-body .list-group a:hover{
+	color: #337AB7;
+}
