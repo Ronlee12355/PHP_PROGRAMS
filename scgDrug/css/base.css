@@ -1,0 +1,26 @@
+.navbar-brand{
+	padding-top: 5px;
+}
+.glyphicon-info-sign{
+	color: #337AB7;
+	}
+#index_head a{
+	cursor:hand;
+}
+#myTab{
+	font-size: 1.3em;
+}
+form{
+	padding-top: 3%;
+}
+#index_bottom{
+	margin-top: 4%;
+}
+.load{
+	display: none;
+	position: absolute;
+	width: 30px;
+	height: 10px;
+	left: 49%;
+	top: 22%;
+}
