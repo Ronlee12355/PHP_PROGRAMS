@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="Keywords" content="systems genetics,course website"/>
+	<meta name="Description" content=""/>
+	<title>systems genetics</title>
+	<script type="text/javascript" charset="UTF-8" src="js/jquery-2.0.0.min.js"></script>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" charset="UTF-8" src="bootstrap/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		.form-group{
+			margin-top: 2.5%;
+		}
+	</style>
+</head>
+<body>
+<div class="modal show fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h3 class="modal-title" id="myModalLabel">Upload PDF/PPTX File</h3>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal" role="form" enctype="multipart/form-data" id="form1">
+					<div class="form-group">
+						<label for="title" class="col-sm-2 control-label">课程标题</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="title" placeholder="请输入课程标题" name="title">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="name" class="col-sm-2 control-label"></label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="name" placeholder="请输入名字">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="inputfile"></label>
+						<div class="col-sm-10">
+							<input type="file" id="inputfile" name="file">
+						</div>
+					</div>
+				</form>
+				<button type="button" class="btn btn-success submit_button" style="margin-left: 18%;">提交</button>
+			</div>
+			<div class="modal-footer">
+				<a href="index.php"><button type="button" class="btn btn-danger" data-dismiss="modal">返回主页</button></a>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('#myModal').modal('show');
+        $('#myModal').modal({keyboard: false});
+        $('#myModal').on('hidden.bs.modal', function () {
+            window.location.href='index.php';
+        });
+		$("#inputfile").change(function () {
+			$("#name").val($(this).val());
+        });
+		$('.submit_button').click(function () {
+		    var form=new FormData($('#form1')[0]);
+		    //console.log(form);
+			$.ajax({
+                type:"post",
+                url:"Class/doAction.php",
+                async:true,
+                data:form,
+                cache: false,
+                processData: false,
+                contentType: false,
+                success:function(data){
+					if(data.status==1){
+                        alert(data.message);
+                        window.location.href='index.php?m=addFile';
+					}else {
+					    alert(data.message);
+					    window.history.go(-1);
+					}
+                },
+                dataType:'json'
+			});
+        });
+    });
+</script>
+</body>
+</html>

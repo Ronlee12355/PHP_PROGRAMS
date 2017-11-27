@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<title>materilza</title>
+	<link rel="stylesheet" type="text/css" href="materialize/iconfont/material-icons.css"/>
+	<link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css"/>
+	<script src="js/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="materialize/js/materialize.min.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css">
+		nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 360px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+footer.page-footer {
+  margin: 0;
+}
+	</style>
+</head>
+<body>
+<nav class="blue" role="navigation">
+	<div class="nav-wrapper container">
+		<a id="logo-container" href="#" class="brand-logo white-text">Systems Genetics</a>
+		<ul class="right hide-on-med-and-down">
+			<li><a class="modal-trigger waves-effect waves-light btn" href="#modal1">详情</a></li>
+		</ul>
+
+		<ul id="nav-mobile" class="side-nav">
+			<li><a class="modal-trigger waves-effect waves-light btn" href="#modal1">详情</a></li>
+		</ul>
+		<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+	</div>
+</nav>
+<div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4 class="orange-text darken-2">系统遗传学</h4>
+      <p>
+      	&nbsp;&nbsp;&nbsp;&nbsp;经过两年的建设和两轮的教学实践，项目整体进展顺利。选课的50多名博士和硕士研究生对系统遗传学研究有大体的了解，掌握该领域的最新进展，能够更好地理解生物体遗传和变异的本质，为树立正确的生命观，
+      	也为将来开展高水平生命科学研究奠定理论基础。基本达到了培养学生“科研的思辨能力”和“组学数据的敏感性”等能力的目标。
+      </p>
+      <p>
+      	&nbsp;&nbsp;&nbsp;&nbsp;通过小组讨论，文献阅读、文献报告、课堂讨论、辩论和教师点评等多种教学环节，使学生了解、掌握系统遗传学的研究策略和研究概况，
+      	从而掌握文献检索、阅读、总结、讲解的基本技能和生物科学研究的基本思路。为生物信息学专业的研究生进行课题研究在逻辑思辨、方法技能和科研思路等方面积累了基础。
+      </p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">同意</a>
+    </div>
+</div>
+<div id="index-banner" class="parallax-container">
+	<div class="section no-pad-bot">
+		<div class="container">
+			<br><br>
+			<h1 class="header center teal-text text-lighten-2">Systems Genetics Offical Website</h1>
+			<div class="row center">
+				<h5 class="header col s12 light black-text" style="font-size: 2.2em;font-family: 'arial narrow';"><?php echo self::$_title;?></h5>
+			</div>
+			<br><br>
+
+		</div>
+	</div>
+	<div class="parallax"><img src="img/biggate.jpg" alt="华中农业大学喷泉"></div>
+</div>
+
+
+<div class="container">
+	<div class="section">
+
+		<!--   Icon Section   -->
+		<div class="row">
+			<div class="col s12 m4">
+				<div class="icon-block">
+					<h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+					<h5 class="center">课程性质</h5>
+
+					<p class="light">
+						&nbsp;&nbsp;&nbsp;&nbsp;《系统遗传学讨论班》是生物信息、生命科学、作物遗传育种、作物生物技术等遗传学相关专业的选修课。遗传学一直以来是生命科学的核心学科，遗传学所研究的生物体的遗传与变异一直是生命科学要重点解决的问题，
+						也是生命科学最关注的核心问题之一。在过去的一个多世纪以来，遗传学研究者取得了一系列与癌症等人类重要疾病、作物产量等重要国计民生等重大问题相关的研究成果
+					</p>
+				</div>
+			</div>
+
+			<div class="col s12 m4">
+				<div class="icon-block">
+					<h2 class="center orange-text"><i class="material-icons">group</i></h2>
+					<h5 class="center">课程形式</h5>
+
+					<p class="light">
+						&nbsp;&nbsp;&nbsp;&nbsp;通过文献检索下载竞赛，激发学习兴趣，从而掌握各种文献检索下载方式和途径。通过生活中经典案例，如“先有鸡还是先有蛋”等，从遗传进化的角色上引导学生思考，
+						讨论和辩论，从而训练学生科研思维和逻辑辩证能力。通过竞赛和讨论等环节，打破传统课堂的沉闷，让学生充分参与到课堂中
+					</p>
+				</div>
+			</div>
+
+			<div class="col s12 m4">
+				<div class="icon-block">
+					<h2 class="center green-text"><i class="material-icons">settings</i></h2>
+					<h5 class="center">课程改进</h5>
+
+					<p class="light">
+						&nbsp;&nbsp;&nbsp;&nbsp;项目建设也存在一些不足之处。不少新入学的研究生，尤其是其他学校考入的研究生，遗传学、分子生物学、计算机和生物信息等多个学科基础都比较薄弱，在进行课程讨论、课堂提问、
+						完成课程作业上具有一定操作和理解困难。因此在课堂问题设计、课程作业布置等发明都要兼顾不同理论和知识层次的学生，这样会耽误一点课程的进度。建议在学院或系的层面，加强学生遗传学和计算机基础等相关基础知识的培养
+					</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+<div class="parallax-container valign-wrapper">
+	<div class="section no-pad-bot">
+		<div class="container" style="width: 80%;">
+			<div class="row center">
+				<div class="icon-block">				
+					<h3 class="center cyan-text accent-4 ">课程基本要求</h3>
+					<ul class="collection" style="background-color: #7986cb;">
+				      <li class="collection-item black-text">1、了解系统遗传学的产生背景；</li>
+				      <li class="collection-item black-text">2、了解系统遗传学的基本原理；</li>
+				      <li class="collection-item black-text">3、了解系统遗传学研究中的主要问题；</li>
+				      <li class="collection-item black-text">4、掌握系统遗传学的主要分析方法</li>
+				      <li class="collection-item black-text">5、了解系统遗传学的的最新进展；</li>
+				      <li class="collection-item black-text">6、掌握文献检索、阅读、总结、讲解的基本技能；</li>
+				      <li class="collection-item black-text">7、掌握科学研究的基本思路。</li>
+				    </ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="parallax"><img src="img/5c7aff314a7192126f4dcc66f65e6d72.jpg" alt="武汉长江大桥夜景"></div>
+</div>
+
+<div class="container">
+	<div class="section">
+		<div class="row">
+			<div class="col s12">
+		      <ul class="tabs">
+		        <li class="tab col s3"><a class="active" href="#test1">1~3章</a></li>
+		        <li class="tab col s3"><a href="#test2">4~6章</a></li>
+		        <li class="tab col s3"><a href="#test3">7~9章</a></li>
+		        <li class="tab col s3"><a href="#test4">10~12章</a></li>
+		      </ul>
+		    </div>
+		    <div id="test1" class="col s12">
+		    	<div class="container" style="margin-top: 3%;">
+		    		<div class="row">		    			
+							<div class="col s12 m4">
+					          <div class="card blue-grey darken-1">
+					            <div class="card-content white-text">
+					              <span class="card-title">第1章  绪论（3学时）</span>
+					              <ul>
+					              	<li>1.1  系统遗传学研究的产生背景（了解）</li>
+					              	<li>1.2  系统遗传学的发展简史（了解）</li>
+					              	<li>1.3  系统遗传学与与经典遗传学主要联系和区别 （掌握）</li>
+					              </ul>
+					            </div>         
+					          </div>
+					      </div>	    					    			
+							<div class="col s12 m4">
+					          <div class="card blue-grey darken-1">
+					            <div class="card-content white-text">
+					              <span class="card-title">第2章  系统遗传学的基本原理（3学时）</span>
+					              <ul>
+					              	<li>2.1  系统遗传学的遗传学基础（掌握）</li>
+					              	<li>2.2  系统遗传学的系统理论基础（了解）</li>
+					              	<li>2.3  系统遗传学的立论依据（掌握）</li>
+					              	<li>2.4  系统遗传学的主要观点及其基本假设（掌握）</li>
+					              </ul>
+					            </div>         
+					          </div>
+					       </div>		    			
+							<div class="col s12 m4">
+					          <div class="card blue-grey darken-1">
+					            <div class="card-content white-text">
+					              <span class="card-title">第3章  系统遗传学的主要研究目标和问题（3学时）</span>
+					              <ul>
+					              	<li>3.1  系统遗传学的主要研究目标（掌握）</li>
+					              	<li>3.2  系统遗传学的主要研究对象（了解）</li>
+					              	<li>3.3  系统遗传学研究的主要复杂性状和复杂问题（了解）</li>					              	
+					              </ul>
+					            </div>         
+					          </div>
+					       </div>		    			
+		    		</div>
+		    	</div>
+		    </div>
+		    <div id="test2" class="col s12">测试 2</div>
+		    <div id="test3" class="col s12">测试 3</div>
+		    <div id="test4" class="col s12">测试 4</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="parallax-container valign-wrapper">
+	<div class="section no-pad-bot">
+		<div class="container">
+			<h4 class="header col s12 light" align="center">教材及主要参考文献</h4>	
+			<div class="row">																	
+				<ul class="collapsible popout" data-collapsible="accordion">
+				    <li>
+				      <div class="collapsible-header black-text"><i class="material-icons">filter_drama</i>Part1</div>
+				      <div class="collapsible-body">				      	
+				      		<p>1.	刘祖洞，乔守怡，吴燕华等，《遗传学》（第三版），北京：高等教育出版社，2013</p>
+				      		<p>2.	Ayroles JF, Carbone MA, Stone EA, Jordan KW, Lyman RF, Magwire MM, Rollmann SM, Duncan LH, Lawrence F, Anholt RR. Systems genetics of complex traits in Drosophila melanogaster. Nature genetics. 2009;41(3):299-307.</p>
+				      		<p>3.	Björkegren JL, Kovacic JC, Dudley JT, Schadt EE. Genome-Wide Significant Loci: How Important Are They?: Systems Genetics to Understand Heritability of Coronary Artery Disease and Other Common Complex Disorders. Journal of the American College of Cardiology. 2015;65(8):830-45.</p>
+				      		<p>4.	Civelek M, Lusis AJ. Systems genetics approaches to understand complex traits. Nature Reviews Genetics. 2014;15(1):34-48.</p>
+				      </div>
+				    </li>
+				    <li>
+				      <div class="collapsible-header black-text"><i class="material-icons">place</i>Part2</div>
+				      <div class="collapsible-body">				     
+				      	<p>5.	Johnson MR, Behmoaras J, Bottolo L, Krishnan ML, Pernhorst K, Santoscoy PLM, Rossetti T, Speed D, Srivastava PK, Chadeau-Hyam M. Systems genetics identifies Sestrin 3 as a regulator of a proconvulsant gene network in human epileptic hippocampus. Nature Communications. 2015;6.</p>
+				      	<p>6.	Lee T, Kim H, Lee I. Network-assisted crop systems genetics: network inference and integrative analysis. Current opinion in plant biology. 2015;24:61-70.</p>
+				      	<p>7.	Li H, Deng H. Systems genetics, bioinformatics and eQTL mapping. Genetica. 2010;138(9-10):915-24.</p>
+				      	<p>8.	Matthews DJ, Kopczynski J. Using model-system genetics for drug-based target discovery. Drug discovery today. 2001;6(3):141-9.</p>
+				      </div>
+				    </li>
+				    <li>
+				      <div class="collapsible-header black-text"><i class="material-icons">whatshot</i>Part3</div>
+				      <div class="collapsible-body">
+				      	<p>9.	Nadeau JH, Dudley AM. Genetics: Systems genetics. Science (New York, NY). 2011;331(6020):1015.</p>
+				      	<p>10.	Penrod NM, Cowper-Sal-lari R, Moore JH. Systems genetics for drug target discovery. Trends in pharmacological sciences. 2011;32(10):623-30.</p>
+				      	<p>11.	Quigley D, Balmain A. Systems genetics analysis of cancer susceptibility: from mouse models to humans. Nature Reviews Genetics. 2009;10(9):651-7.</p>
+				      </div>
+				    </li>
+				  </ul>
+			</div>
+		</div>
+	</div>
+	<div class="parallax"><img src="img/5c7aff314a7192126f4dcc66f65e6d72.jpg" alt="武汉长江大桥夜景"></div>
+</div>
+<div class="container">
+	<div class="section">
+		<h4 class="header col s12 light" align="center">文件下载专区</h4>
+		<div class="row">
+			<div class="col s6 m6">
+          <div class="card  lime lighten-1">
+            <div class="card-content black-text">
+              <span class="card-title">课程ppt</span>
+			  <p><a href="./uploads/ppts.zip" download="ppts.zip">系统遗传学-课件2017</a></p>
+              <?php
+              	if(!empty($file_list['pptx'])){
+				foreach($file_list['pptx'] as $k){ 
+              		$k=str_replace(__ROOT__,'.',$k);
+              		$k=!ctype_alpha($k)?iconv('gb2312','UTF-8',$k):$k;
+              		$filename=explode('/',$k);
+              		$filename=array_pop($filename);
+              		echo "<p><a href=\"$k\" download=\"$filename\">$filename</a></p>";                       
+              	}
+				
+				}
+              	?>
+            </div>           
+          </div>
+        </div>
+        <div class="col s6 m6">
+          <div class="card  green accent-2">
+            <div class="card-content black-text">
+              <span class="card-title">课程文件</span>
+			  <p><a href="./uploads/applicationForClass.docx" download="华中农业大学研究生课程建设项目结题申请表-杨庆勇.docx">华中农业大学研究生课程建设项目结题申请表-杨庆勇</a></p>
+			  <p><a href="./uploads/Seminar.doc" download="系统遗传学讨论班-大纲.doc">系统遗传学讨论班-大纲</a></p>
+              <?php
+              	if(!empty($file_list['pdf'])){
+					foreach($file_list['pdf'] as $k1){ 
+              		$k1=str_replace(__ROOT__,'.',$k1);
+              		$k1=!ctype_alpha($k1)?iconv('gb2312','UTF-8',$k1):$k1;
+              		$filename1=explode('/',$k1);
+              		$filename1=array_pop($filename1);
+              		echo "<p><a href=\"$k1\" download=\"$filename1\">$filename1</a></p>";                       
+              	}
+				}
+              	?>
+            </div>           
+          </div>
+        </div>
+		</div>
+	</div>
+</div>
+<footer class="page-footer #00b0ff">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5 class="white-text">课程信息</h5>
+				<p class="grey-text text-lighten-4">
+					通过本课程的学习，希望学生对系统遗传学研究有大体的了解，掌握该领域的最新进展，在更深层次上理解生物体遗传和变异的本质，为树立正确的生命观，也为将来开展高水平生命科学研究奠定理论基础
+				</p>
+			</div>
+			<div class="col l3 offset-s3">
+			</div>
+			<div class="col l3 s12">
+				<h5 class="white-text">其他</h5>
+				<ul>
+					<li><a class="white-text" href="#!">主讲老师：杨庆勇老师</a></li>
+					<li><a class="white-text" href="#!">课程助教：胡悦</a></li>
+					<li><a class="white-text" href="#!">承办单位：华中农业大学信息学院生物信息系</a></li>					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container white-text">
+			Made and designed by Ron Lee &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CopyRight © 华中农业大学信息学院版权所有
+		</div>
+	</div>
+</footer>
+<!--  Scripts-->
+<script src="js/init.js"></script>
+</body>
+</html>
