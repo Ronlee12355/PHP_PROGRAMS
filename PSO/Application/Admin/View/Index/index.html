@@ -1,0 +1,29 @@
+<include file="Index/header" />		
+	<div class="container">
+		<ol class="breadcrumb">
+			<li><a href="__APP__/Admin/Index/index">首页</a></li>
+			<li><a href="__APP__/Admin/Index/index">欢迎</a></li>		
+		</ol>
+		<div class="panel panel-primary">
+		    <div class="panel-heading">
+		        <h3 class="panel-title">系统信息</h3>
+		    </div>
+		    <div class="panel-body">
+		        <div class="row">
+		        	<div class="col-md-3">
+		        		<img src="__PUBLIC__/img/computer.png" class="img-responsive"/>
+		        	</div>
+		        	<div class="col-md-9">
+		        		<ul class="list-group">
+						    <li class="list-group-item">服务器解译引擎:&nbsp;<strong>{$arr['SERVER_SOFTWARE']}</strong></li>
+						    <li class="list-group-item">客户机浏览器:&nbsp;<strong>{$arr['HTTP_USER_AGENT']}</strong></li>
+						    <li class="list-group-item">php版本:&nbsp;<strong>{$arr['PHP_VERSION']}</strong></li>
+						    <li class="list-group-item">MySQL版本:&nbsp;<strong>{$arr['MYSQL_VERSION']}</strong></li>
+						    <li class="list-group-item">主机地址:&nbsp;<strong>{$arr['REMOTE_ADDR']}</strong></li>					    
+						</ul>
+		        	</div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+<include file="Index/footer" />

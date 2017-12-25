@@ -1,0 +1,74 @@
+<include file='Index/head'/>
+	<div class="container-fluid">
+		<div class="caption">
+			<h1 align="center" style="color: white;">A GeneRank-based method for precision psoriasis therapy</h1>
+		</div>
+		<div class="container" style="margin-top: 2%;">
+			<div class="panel panel-default">
+			    <div class="panel-body" style="height: 370px;">
+			        <form class="form-horizontal" enctype="multipart/form-data" id="upload_form">
+		                    <div class="form-group">
+		                        <label class="col-sm-4 control-label" for="file">Data type</label>
+		                            <div class="col-sm-8">
+		                                <label class="radio-inline">
+									        <input type="radio" name="optionsRadios" value="genechip" checked="checked">Genechip
+									    </label>
+									    <label class="radio-inline">
+									        <input type="radio" name="optionsRadios" value="rnaseq">RNAseq
+									    </label>
+		                            </div>
+		                    </div>
+		                    <br />
+		                    <div class="form-group">
+		                        <label class="col-sm-4 control-label" for="file">Upload the data for cancer patient</label>
+		                            <div class="col-sm-8">										
+										<input id="lefile" type="file" style="display:none" name="input_file">  
+										<div class="input-append">  
+										    <input id="photoCover" class="input-lg" type="text">  
+										    <a class="btn btn-primary" onclick="$('input[id=lefile]').click();">
+										    	<span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Browse</a>  
+										</div>  
+										<span style="color: red;">Only the excel file is allowed</span>
+									</div>
+							</div>
+							 <br />
+							<div class="form-group">
+		                        <label class="col-sm-4 control-label" for="file">Upload the control data?</label>
+		                            <div class="col-sm-8">
+		                                <label class="radio-inline">
+									        <input type="radio" name="optionsRadios2" value="yes">Yes
+									    </label>
+									    <label class="radio-inline">
+									        <input type="radio" name="optionsRadios2" value="no" checked="checked">No
+									    </label>
+		                            </div>
+		                    </div>
+		                    <br />
+						    <div class="form-group control" style="display:none;">
+		                        <label class="col-sm-4 control-label" for="file"></label>
+		                            <div class="col-sm-8">										
+										<input id="lefile2" type="file" style="display:none" name="control_file">  
+										<div class="input-append">  
+										    <input id="photoCover2" class="input-lg" type="text">  
+										    <a class="btn btn-primary" onclick="$('input[id=lefile2]').click();">
+										    	<span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Browse</a>  
+										</div>  
+										<span style="color: red;">Only the excel file is allowed</span>
+									</div>
+							</div>							
+					</form>
+			    </div>
+			    <div class="panel-footer">
+			    	<p class="text-center"><button type="button" class="btn btn-success btn-lg" id="screen_drug">Submit</button></p>
+			    </div>
+			</div>
+		</div>
+	</div>
+	<script>
+		var SCOPE={
+			'precess_url':'__APP__/Home/Screen/screenDrug',
+			'precess_control_url':'__APP__/Home/Screen/screenDrugControl',
+			'jump_url':'__APP__/Home/Index/showDownload'
+		}
+	</script>
+	<include file='Index/foot'/>

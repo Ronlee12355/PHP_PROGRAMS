@@ -1,0 +1,23 @@
+<include file='Index/head'/>
+<div class="container">
+	<div class="caption">
+		<h2 align="center" style="color: white;">DESCRIPTIVE TEXT FOR THE PLATFORM</h2>
+	</div>
+	<div class="panel panel-success" style="margin-top: 3%;">		
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-md-6">
+					<img src="{$vo.upload_img}" class="img-responsive" style="height: 400px;"/>
+				</div>
+				<div class="col-md-6">
+					{$vo.upload_text|html_entity_decode=###}
+					<hr />
+					<p><strong style="font-size: larger;color: red;">Download the descript file:</strong>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{$vo.upload_file}" class="btn btn-info btn-lg" download="DESCRIPTIVE.pdf">
+          				<span class="glyphicon glyphicon-download-alt"></span> Download
+        				</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<include file='Index/foot'/>

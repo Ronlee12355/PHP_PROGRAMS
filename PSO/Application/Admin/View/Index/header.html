@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="Keywords" content="{$f.keywords}"/>
+	<meta name="Description" content="{$f.description}"/>
+	<title>{$f.title}</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/admin_common.css"/>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/uploadify.css"/>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/morris.css"/>
+	<!--[if lte IE 9]>
+	<script src="__PUBLIC__/js/html5.js" type="text/javascript"></script>
+	<![endif]-->
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+	    <div class="container-fluid">
+		    <div class="navbar-header">
+		        <a class="navbar-brand" href="__APP__/Admin/Index/index">银屑病药物平台后台管理系统</a>
+		    </div>
+	    <div>
+	    	<if condition="session('is_login')">
+	        <ul class="nav navbar-nav">
+	            <li class="dropdown">
+	                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	                   	 首页<b class="caret"></b>
+	                </a>
+	                <ul class="dropdown-menu">	                    	                    
+	                    <li><a href="__APP__/Admin/Index/index">欢迎</a></li>
+	                    <li class="divider"></li>
+	                    <li><a href="__APP__/Admin/Index/indexConfig">服务器配置</a></li>
+	                </ul>
+	            </li>
+	            <li><a href="__APP__/Admin/Mailconfig/index">邮箱配置</a></li>
+	            <li><a href="__APP__/Admin/User/index">会员管理</a></li>
+	            <li><a href="__APP__/Admin/Basic/index">站点配置</a></li>
+	            <li><a href="__APP__/Admin/About/index">栏目</a></li>
+	        </ul>
+	        
+	        <ul class="nav navbar-nav navbar-right">
+	        	<li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;{$name}</a></li>
+	        	<li><a href="__APP__/Home/Index/index" target="_blank"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;前台</a></li>
+	        	<li><a href="__APP__/Admin/Login/doLogOut"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;退出</a></li>
+	        </ul>
+	        </if>
+	    </div>
+	    </div>
+	</nav>

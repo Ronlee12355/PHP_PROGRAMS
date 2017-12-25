@@ -1,0 +1,27 @@
+<include file='Index/head'/>
+<div class="container">
+	<div class="caption">
+		<h1 align="center" style="color: white;">Download</h1>
+	</div>
+	<div class="well well-lg" style="margin-top: 2%;">
+		<table class="table table-hover">
+	  <thead>
+	    <tr>
+	      <th>Data Type</th>
+	      <th>Upload Time</th>
+	      <th>Link</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  	<volist name="result" id="vo">
+	    <tr>
+	      <td>{$vo.data_type|strtoupper}</td>
+	      <td>{$vo.create_time|date="Y-m-d H:i:s"}</td>
+	      <td>{$vo.download_url}</td>
+	    </tr>
+	    </volist>
+	  </tbody>
+	</table>
+	</div>
+</div>
+<include file='Index/foot'/>

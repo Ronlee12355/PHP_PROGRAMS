@@ -1,0 +1,73 @@
+<include file="Index/header" />		
+	<div class="container">
+		<ol class="breadcrumb">
+			<li><a href="__APP__/Admin/Index/index">首页</a></li>
+			<li><a href="__APP__/Admin/User/index">所有用户</a></li>		
+		</ol>
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h3 class="panel-title">操作选项</h3>
+			</div>
+			<div class="panel-body">
+				<form class="form-inline" role="form" action="__APP__/Admin/User/index" method="get">
+					<div class="form-group">
+						<label for="name">选择列表</label>
+					    <select class="form-control" name="type">
+					      <option value="id">用户ID</option>
+					      <option value="username">用户姓名</option>
+					      <option value="email">邮箱</option>					      
+					    </select>
+					</div>
+				  <div class="form-group">
+				    <label class="sr-only" for="name">名称</label>
+				    <input type="text" class="form-control" id="name" placeholder="请输入名称" name="name">
+				  </div>								  
+				  <button type="submit" class="btn btn-default">提交</button>
+				</form>
+			</div>
+		</div>
+		<div class="panel panel-primary">
+		    <div class="panel-heading">
+		        <h3 class="panel-title">个人会员管理列表</h3>
+		    </div>
+		    <div class="panel-body text-center">
+		        <table class="table table-bordered table-condensed">				  
+				  <thead>
+				    <tr>
+				      <th class="text-center">ID</th>
+				      <th class="text-center">Name</th>
+				      <th class="text-center">Email</th>
+				      <th class="text-center">审核</th>
+				      <th class="text-center">激活</th>
+				      <th class="text-center">操作</th>
+				    </tr>
+				  </thead>
+				  <tbody>				  	
+				  	<volist name="user" id="vo" >
+				    <tr>
+				      <td>{$vo.id}</td>
+				      <td>{$vo.username}</td>
+				      <td>{$vo.email}</td>
+				      <td>{$vo.verify|get_status}</td>
+				      <td>{$vo.status|get_status}</td>
+				      <td>
+				      	<p class="text-center">
+				      		<a href="javascript:void(0)" class="pso_edit" attr-id="{$vo.id}"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>&nbsp;修改</a> |				  	
+				      		<a href="javascript:void(0)" class="pso_delete" attr-id="{$vo.id}" attr-message="删除"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>&nbsp;删除</a>
+				      	</p>
+				      </td>
+				    </tr>
+				    </volist>
+				  </tbody>
+				</table>
+		    </div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var SCOPE={
+			'edit_url':'__APP__/Admin/User/edit',
+			'delete_url':'__APP__/Admin/User/delete',
+			'jump_url':'__APP__/Admin/User/index',
+		}
+	</script>
+<include file="Index/footer" />

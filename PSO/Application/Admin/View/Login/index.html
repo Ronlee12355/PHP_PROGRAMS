@@ -1,0 +1,80 @@
+<include file="Index/header" />
+	<div class="container" style="margin-top: 7%;">
+		<div class="well well-lg">
+			<div class="caption">
+				<h1 align="center">Login</h1>
+			</div>
+			<form class="form-horizontal" role="form">
+			  <div class="form-group">
+			    <label for="username" class="col-sm-2 control-label">Username</label>
+			    <div class="col-sm-10">
+			      <input type="text" class="form-control" id="username" placeholder="Your name" name="username">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="password" class="col-sm-2 control-label">Password</label>
+			    <div class="col-sm-10">
+			      <input type="password" class="form-control" id="password" placeholder="Your password" name="passwd">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <div class="checkbox">
+			        <label>
+			          <input type="checkbox" name="rmPasswd" checked="checked">Remember the password
+			        </label>
+			      </div>
+			    </div>
+			  </div>		 
+			</form>
+			<p class="text-center"><button class="btn-lg btn-primary" onclick="login()">Login</button></p>
+			<script type="text/javascript">
+				var SCOPE={
+			'save_url':'__APP__/Admin/Login/doLogin',
+			'jump_url':'__APP__/Admin/Index/index',
+		};
+			</script>
+		</div>
+	</div>
+	<script type="text/javascript">	
+		$(function(){
+			if($.cookie('rmbUser') == "true"){
+				$('input[name="rmPasswd"]:checked');
+				$('#username').val($.cookie('username'));
+				$('#password').val($.cookie('password'));
+			}
+		});
+		
+		function login(){
+			if ($('input[name="rmPasswd"]:checked')) {
+				var str_username = $("#username").val();
+				var str_password = $("#password").val();
+				$.cookie("rmbUser", "true", { expires: 7 }); //存储一个带7天期限的cookie
+				$.cookie("username", str_username, { expires: 7 });
+				$.cookie("password", str_password, { expires: 7 });
+			} else{
+				$.cookie("rmbUser", "false", { expires: -1 });
+				$.cookie("username", '', { expires: -1 });
+				$.cookie("password", '', { expires: -1 });
+			}
+			
+			var data = {};
+			data['username']=$('#username').val();
+			data['passwd']=$('#password').val();
+			$.ajax({
+				type:"post",
+				url:SCOPE.save_url,
+				async:true,
+				data:data,
+				success:function(res){
+					if (res.status == 1) {
+						return dialog.success(res.msg,SCOPE.jump_url);
+					} else{
+						return dialog.error(res.msg);
+					}
+				},
+				dataType:'json',
+			});
+		}
+	</script>
+<include file="Index/footer" />

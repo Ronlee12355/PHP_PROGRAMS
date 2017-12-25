@@ -1,0 +1,69 @@
+<include file='Index/head'/>
+<div class="container">
+	<div class="caption">
+		<h1 align="center" style="color: white;">Sign Up</h1>
+	</div>
+	<div class="panel panel-default" style="margin-top: 2%;">
+	    <div class="panel-body">
+	        <form class="form-horizontal" style="margin-top: 2%;" id="pso_form">
+	        	<div class="form-group">
+					<label for="name" class="col-sm-3 control-label">Name</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" id="name" placeholder="Your name" required="required" name="username" autocomplete="on">
+					</div>
+				</div>
+	        	<div class="form-group">
+					<label for="email" class="col-sm-3 control-label">Email</label>
+					<div class="col-sm-9">
+						<input type="email" class="form-control" id="email" placeholder="Your email" required="required" name="email" autocomplete="on">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="passwd" class="col-sm-3 control-label">Password</label>
+					<div class="col-sm-9">
+						<input type="password" class="form-control" id="passwd" placeholder="Your password" required="required" name="passwd" autocomplete="on">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="designation" class="col-sm-3 control-label">Designation</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" id="designation" placeholder="Your password" required="required" name="designation">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="institution" class="col-sm-3 control-label">Institution</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" id="institution" placeholder="Your password" required="required" name="institution">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="address" class="col-sm-3 control-label">Address</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" id="address" placeholder="Your password" required="required" name="address">
+					</div>
+				</div>
+				<div class="form-group">
+		            <label class="col-sm-3 control-label" for="file">User Type</label>
+		                <div class="col-sm-9">
+		                    <label class="radio-inline">
+								<input type="radio" name="user_type" value="academic" checked="checked">Academic users
+							</label>
+							<label class="radio-inline">
+								<input type="radio" name="user_type" value="business">Business users
+							</label>
+		                </div>
+		        </div>
+	        </form>
+	    </div>
+	    <div class="panel-footer">
+	    	<p class="text-center"><button type="button" class="btn btn-success btn-lg" id="pso_submit">Submit</button></p>
+	    </div>
+	</div>
+</div>
+<script type="text/javascript">
+	var SCOPE={
+		'save_url':'__APP__/Home/Login/doSignUp',
+		'jump_url':'__APP__/Home/Login/index',
+	}
+</script>
+<include file='Index/foot'/>

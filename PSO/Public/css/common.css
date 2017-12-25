@@ -1,0 +1,22 @@
+nav .navbar-header a{
+	font-size: 2em;
+}
+nav ul a{
+	font-size: 1em;
+}
+body{
+	padding-top: 70px;
+	background: url('../img/world.png') center no-repeat;
+	background-attachment: fixed;
+	background-size: cover; 
+}
+.well{
+	font-size: 1.5em;
+}
+#upload_form{
+	font-size: 1.3em;
+}
+.input-lg{
+	height: 40px;
+	padding: 10px 100px;
+}

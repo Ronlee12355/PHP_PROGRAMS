@@ -1,0 +1,59 @@
+<include file="Index/header" />	
+<div class="container">
+	<ol class="breadcrumb">
+		<li><a href="__APP__/Admin/Index/index">首页</a></li>
+		<li><a href="__APP__/Admin/About/index">栏目配置</a></li>		
+	</ol>
+	<div class="panel panel-danger">
+		<div class="panel-heading">
+			<h3 class="panel-title">栏目配置参数</h3>
+		</div>
+		<div class="panel-body">
+			<form class="form-horizontal" id="pso_form">
+				<div class="form-group">
+						<label for="inputname" class="col-sm-2 control-label">网站文件:</label>
+						<div class="col-sm-5">
+							<input id="pdf_upload"  type="file" multiple="true" name="file">							
+							<input id="file_upload_pdf" name="upload_file" type="hidden" multiple="true" value="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputname" class="col-sm-2 control-label">缩图:</label>
+						<div class="col-sm-5">
+							<input id="file_upload"  type="file" multiple="true" name="pdf_file">
+							<img style="display: none" id="upload_org_code_img" src="" width="150" height="150">
+							<input id="file_upload_image" name="upload_img" type="hidden" multiple="true" value="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">网站简介描述:</label>
+						<div class="col-sm-10">
+							<script id="content" name="upload_text" type="text/plain"></script>
+						</div>
+					</div>				
+			</form>
+			<p class="text-center"><button class="btn btn-default btn-lg" id="pso_submit">提交</button>
+				<a href="__APP__/Admin/About/index"><button class="btn btn-default btn-lg">返回</button></a>
+			</p>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	var SCOPE={
+		'edit_url':'__APP__/Admin/About/saveFile',
+		'jump_url':'__APP__/Admin/About/index',		
+		'ajax_upload_image_url' : '__APP__/Admin/Image/ajaxuploadimage',
+		'ajax_upload_swf' : '__PUBLIC__/js/uploadify.swf',
+		'ajax_upload_pdf_url':'__APP__/Admin/Image/ajaxuploadpdf',
+	}	
+</script>
+<include file="Index/footer" />
+<script src="__PUBLIC__/js/image.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/js/jquery.uploadify.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/Ueditor/ueditor.config.js" type="text/javascript" charset="utf-8"></script>
+<script src="__PUBLIC__/Ueditor/ueditor.all.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var ue=UE.getEditor('content',{
+		initialFrameHeight: 300
+	}).getContentTxt();
+</script>

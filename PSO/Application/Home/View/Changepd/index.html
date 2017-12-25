@@ -1,0 +1,35 @@
+<include file='Index/head'/>
+<div class="container">
+	<div class="caption">
+		<h1 align="center" style="color: white;">Forget Password</h1>
+	</div>
+	<div class="panel panel-default" style="margin-top: 2%;">
+	    <div class="panel-body">
+	        <form class="form-horizontal" style="margin-top: 3%;" id="pso_form">
+	        	<div class="form-group">
+					<label for="name" class="col-sm-2 control-label">Name</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="name" placeholder="Your name" required="required" name="username">
+					</div>
+				</div>
+	        	<div class="form-group">
+					<label for="email" class="col-sm-2 control-label">Email</label>
+					<div class="col-sm-10">
+						<input type="email" class="form-control" id="email" placeholder="Your email" required="required" name="email">
+					</div>
+				</div>				
+	        </form>
+	    </div>	   
+	    <div class="panel-footer">
+	    	<p class="text-center"><button type="button" class="btn btn-success btn-lg" id="pso_submit">Submit</button></p>
+	    </div>
+	</div>
+</div>
+<script type="text/javascript">
+	var SCOPE={
+		'save_url':'__APP__/Home/Changepd/sendValidateEmail',
+		'jump_url':'__APP__/Home/Login/index',
+	}
+</script>
+<include file='Index/foot'/>
+

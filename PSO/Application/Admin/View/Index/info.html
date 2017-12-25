@@ -1,0 +1,18 @@
+<include file="Index/header" />		
+	<div class="container">
+		<ol class="breadcrumb">
+			<li><a href="__APP__/Admin/Index/index">首页</a></li>
+			<li><a href="__APP__/Admin/Index/index">服务器配置</a></li>		
+		</ol>
+		<div class="panel panel-primary">
+		    <div class="panel-heading">
+		        <h3 class="panel-title">服务器配置信息</h3>
+		    </div>
+		    <div class="panel-body">
+		        <?php
+		        	phpinfo();
+		        	?>
+		    </div>
+		</div>
+	</div>
+<include file="Index/footer" />
