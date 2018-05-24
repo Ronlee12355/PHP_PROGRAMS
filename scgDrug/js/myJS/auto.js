@@ -40,7 +40,8 @@
 					 $("#prediction .table").DataTable({
 							dom:'Bfrtip',
 							data:dddd,
-							"info":true,
+							info:true,
+						        bDestroy: true,
 							buttons:['copy','excel','csv','pdf'],
 							columns: [
 						            { data: 'diseases' },
@@ -78,6 +79,7 @@
 					 $("#gene_drug_info .table").DataTable({
 							dom:'Bfrtip',
 							data:data.gd,
+						 	bDestroy: true,
 							"info":true,
 							buttons:['copy','excel','csv','pdf'],
 							columns: [
