@@ -1,3 +1,6 @@
-# zhangLab
-It's a bioinfomatics lab website
-This is a simple bioinfomatic representing website for HZAU in wuhan,China
+# Self-made web sites using LAMP along with some Python and R scripts
+1.Front-End:Materialize  Bootstrap
+2.Back-End:ThinkPHP or no-framework
+3.Database:MySQL
+4.Webserver:Apache
+5.Platform:CentOS
